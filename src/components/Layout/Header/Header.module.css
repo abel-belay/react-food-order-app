@@ -1,0 +1,39 @@
+.header {
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  color: white;
+  background-color: #8a2b06;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.main-image {
+  width: 100vw;
+  height: 25rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-5deg) translateY(-5rem) translateX(-2rem);
+}

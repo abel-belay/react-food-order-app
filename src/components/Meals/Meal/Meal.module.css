@@ -1,0 +1,36 @@
+.meal {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about * {
+  padding: 0.1rem;
+}
+
+.about h4 {
+  font-weight: bold;
+}
+
+.description {
+  font-style: italic;
+}
+
+.price {
+  font-weight: bold;
+  color: #894B1E;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

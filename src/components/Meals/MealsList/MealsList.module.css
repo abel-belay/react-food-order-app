@@ -1,0 +1,12 @@
+.list {
+  width: 60vw;
+}
+
+.list > li {
+  padding: 0.5rem;
+  border-bottom: 1px #E4E4E4 solid;
+}
+
+.list > li:last-child {
+  border-bottom: none;
+}
