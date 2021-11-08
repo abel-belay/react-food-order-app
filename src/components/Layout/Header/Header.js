@@ -5,6 +5,7 @@ import HeaderCartButton from "../HeaderCartButton/HeaderCartButton";
 import mealsImage from "../../../assets/meals.jpeg";
 
 const Header = () => {
+
   return (
     <React.Fragment>
       <header className={styles.header}>

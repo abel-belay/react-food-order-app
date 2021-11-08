@@ -1,5 +1,6 @@
 .list {
-  width: 60vw;
+  width: 90vw;
+  max-width: 45rem;
 }
 
 .list > li {

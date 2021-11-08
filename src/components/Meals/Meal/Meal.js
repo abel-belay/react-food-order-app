@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Meal.module.css";
+import MealForm from "./MealForm";
 
 const Meal = (props) => {
   return (
@@ -9,13 +10,7 @@ const Meal = (props) => {
         <p className={styles.description}>{props.description}</p>
         <p className={styles.price}>${props.price}</p>
       </div>
-      <form className={styles.order}>
-        <div>
-          <label htmlFor="amount">Amount</label>
-          <input type="number" id="amount" />
-        </div>
-        <button type="submit">+ Add</button>
-      </form>
+      <MealForm id={props.id} />
     </div>
   );
 };

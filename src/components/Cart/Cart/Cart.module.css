@@ -1,0 +1,36 @@
+.modal > * {
+  margin: 1rem;
+  border: 1px red dotted;
+}
+
+.total {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  height: 2rem;
+  padding: 0 1.5rem;
+
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  background-color: #7F2709;
+  cursor: pointer;
+}
+
+.button-alt {
+  margin-right: 1rem;
+  color: #7F2709;
+  background-color: white;
+  border: 1px #7F2709 solid;
+}
