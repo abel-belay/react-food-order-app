@@ -7,7 +7,6 @@ import ShowCartContext from "./store/ShowCartContext";
 
 function App() {
   const {showCart} = useContext(ShowCartContext);
-  console.log("App Component Rendered!");
 
   return (
     <React.Fragment>
