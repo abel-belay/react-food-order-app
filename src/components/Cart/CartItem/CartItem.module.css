@@ -16,10 +16,20 @@
   color: #771E0C;
 }
 
-.input {
-  width: 2rem;
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 3rem;
+  height: 1.8rem;
   margin-left: 3rem;
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #E9E9E9 solid;
+  border-radius: 0.2rem;
 }
 
 .actions {

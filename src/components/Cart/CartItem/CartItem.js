@@ -3,26 +3,44 @@ import { useContext } from "react";
 import CartContext from "../../../store/CartContext";
 
 const CartItem = (props) => {
-  const {item} = props;
-  const {addToCartHandler} = useContext(CartContext);
+  const { item } = props;
+  const { dispatchCart } = useContext(CartContext);
 
   const addToCartClickHandler = () => {
-    addToCartHandler({...item, quantity: 1})
-  }
+    dispatchCart({
+      type: "ADD_ITEM",
+      item: {
+        ...item,
+        quantity: 1,
+      },
+    });
+  };
+
+  const removeFromCartClickHandler = () => {
+    dispatchCart({
+      type: "REMOVE_ITEM",
+      item: {
+        ...item,
+        quantity: 1,
+      },
+    });
+  };
 
   return (
-    <div className={styles["cart-item"]} >
+    <div className={styles["cart-item"]}>
       <div className={styles.about}>
         <h4 className={styles.name}>{item.name}</h4>
-        <p className={styles.price}>${item.price}</p>
-        <input className={styles.input} type="number" value={item.quantity} />
+        <div className={styles.details}>
+          <p className={styles.price}>${item.price.toFixed(2)}</p>
+          <p className={styles.quantity}>x{item.quantity}</p>
+        </div>
       </div>
       <div className={styles.actions}>
-        <button>-</button>
+        <button onClick={removeFromCartClickHandler}>-</button>
         <button onClick={addToCartClickHandler}>+</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default CartItem;

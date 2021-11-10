@@ -5,9 +5,11 @@ import ShowCartContext from "../../../store/ShowCartContext";
 import CartContext from "../../../store/CartContext";
 import CartItem from "../CartItem/CartItem";
 
+
 const Cart = () => {
   const { setShowCart } = useContext(ShowCartContext);
   const { cart } = useContext(CartContext);
+  console.log(cart);
 
   const hideCartButtonClickHandler = () => {
     setShowCart(false);
@@ -20,15 +22,15 @@ const Cart = () => {
   ));
 
   const totalCost = cart.reduce((total, cartItem) => {
-    return Math.round((total + cartItem.price * cartItem.quantity) * 100) / 100;
+    return total + cartItem.price * cartItem.quantity;
   }, 0);
 
   return (
     <Modal>
-      <ul>{cartItemComponents}</ul>
+      <ul className={styles.list} >{cartItemComponents}</ul>
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>${totalCost}</span>
+        <span>${totalCost.toFixed(2)}</span>
       </div>
       <div className={styles.actions}>
         <button

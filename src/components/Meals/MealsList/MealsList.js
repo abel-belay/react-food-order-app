@@ -30,7 +30,7 @@ const DUMMY_MEALS = [
 ];
 
 const MealsList = () => {
-  const mealComponents = DUMMY_MEALS.map((meal) => (<li key={meal.id}><Meal name={meal.name} description={meal.description} price={meal.price} id={meal.id} /></li>))
+  const mealComponents = DUMMY_MEALS.map((meal) => (<li key={meal.id}><Meal meal={meal} /></li>))
 
   return (
     <Card>
