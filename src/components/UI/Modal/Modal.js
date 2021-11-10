@@ -9,7 +9,7 @@ const Backdrop = () => {
     setShowCart(false);
   };
 
-  return <div className={styles.backdrop} onClick={hideCartClickHandler}></div>;
+  return <div className={styles.backdrop} onMouseDown={hideCartClickHandler}></div>;
 };
 
 const ModalOverlay = (props) => {
