@@ -9,7 +9,6 @@ import CartItem from "../CartItem/CartItem";
 const Cart = () => {
   const { setShowCart } = useContext(ShowCartContext);
   const { cart } = useContext(CartContext);
-  console.log(cart);
 
   const hideCartButtonClickHandler = () => {
     setShowCart(false);

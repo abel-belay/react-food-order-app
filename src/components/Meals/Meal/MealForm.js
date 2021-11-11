@@ -13,6 +13,10 @@ const MealForm = (props) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
 
+    if (+inputRef.current.value < 1) {
+      return
+    }
+
     dispatchCart({
       type: "ADD_ITEM",
       item: {
